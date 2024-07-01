@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            font-size: 14px;
+        }
+        td {
+            padding: 8px 12px;
+        }
+        table, td{
+            border: 1px solid #9f9f9f;
+            border-collapse: collapse;
+        }
+        .active {
+            font-weight: bold;
+        }
+        .active.light {
+            background: #9fabcf;
+        }
+        .active.dark {
+            background: #1d2c4d;
+            color: #fff;
+        }
+        .align-center {
+            text-align: center;
+        }
+        .highlighter {
+            background: #97a9b7;
+        }
+        hr {
+            margin: 20px 0;
+            border-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="active light">Texte</td>
+                <td colspan="3">Texte</td>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td class="active light">Texte</td>
+                <td colspan="3">Texte</td>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+                <td class="active light">Texte</td>
+                <td>Texte</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <table cellspacing="0">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <td class="active dark">Texte</td>
+                <td class="active dark">Texte</td>
+                <td class="active dark">Texte</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Texte</td>
+                <td>Texte</td>
+                <td>Texte</td>
+            </tr>
+            <tr class="highlighter">
+                <td class="active">Texte</td>
+                <td>Texte</td>
+                <td>Texte</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <table cellspacing="0">
+        <colgroup>
+            <col>
+        </colgroup>
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td class="active">Texte</td>
+            </tr>
+            <tr>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td class="active">Texte</td>
+            </tr>
+            <tr>
+                <td>Texte</td>
+            </tr>   
+        </tbody>
+    </table>
+    <hr />
+    <table cellspacing="0">
+        <colgroup>
+            <col>
+            <col width="25%">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <td colspan="4" class="active dark align-center">Texte</td>
+                <td rowspan="2" class="active dark align-center">Texte</td>
+                <td colspan="3" class="active dark align-center">Texte</td>
+            </tr>
+            <tr>
+                <td class="active dark align-center">Texte</td>
+                <td class="active dark align-center">Texte</td>
+                <td class="active dark align-center">Texte</td>
+                <td class="active dark align-center">Texte</td>
+                <td class="active dark align-center">Texte</td>
+                <td class="active dark align-center">Texte</td>
+                <td class="active dark align-center">Texte</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="active align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+            </tr>
+            <tr>
+                <td class="active align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+            </tr>
+            <tr>
+                <td class="active align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+                <td class="align-center">Texte</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
