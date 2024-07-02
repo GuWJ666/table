@@ -5,82 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .table {
+        table {
             width: 100%;
             font-size: 14px;
             border-collapse: collapse;
         }
 
-        .table td {
+        /* primary */
+        .table-primary td {
             padding: 8pt 12pt;
         }
 
-        .table, .table td{
-            border: 1px solid #9f9f9f;
+        .table-primary, .table-primary td{
+            border: 2pt solid #ddd;
         }
 
-        caption {
-            text-align: left;
-            font-weight: bold;
-            padding-bottom: 8pt;
-        }
-
-        .table-striped>:not(caption)>tr:nth-child(2n+1){
-            font-weight: bold;
-        }
-
-        .table-striped-columns>:not(caption)>tr>:nth-child(2n+1) {
+        .table-primary>:not(caption)>tr>:nth-child(2n+1) {
             background: #9fabcf;
         }
+        
+        /* table-secondary */
+        .table-secondary td {
+            padding: 8pt 12pt;
+        }
 
-        .table-dark>thead {
+        .table-secondary, .table-secondary td{
+            border: 2pt solid #ddd;
+        }
+
+        .table-secondary>tbody>tr:nth-child(1) {
             background: #1d2c4d;
             color: #fff;
         }
 
-        .table-light>thead {
-            background: #9fabcf;
+        /* table-card */
+        .table-card td {
+            padding: 4pt 8pt;
         }
 
-        .align-center {
-            text-align: center;
+        .table-card {
+            border: 2pt solid #ddd;
+        }
+        
+        /* table-card-noborder */
+        .table-card-noborder td {
+            padding: 4pt 0pt;
         }
 
-        .align-left {
-            text-align: left;
+        .table-card-noborder>tbody>tr:nth-child(1)>td {
+            padding-left: 8pt;
         }
 
-        .align-right {
-            text-align: right;
+        /* table-light */
+        .table-light, .table-light td {
+            border-collapse: separate;
+            border-spacing: 2pt;
         }
-        /* .td-table {
-            border-bottom-color: transparent;
+
+        .table-light td {
+            background-color: #ddd;
         }
-        .active {
+
+        /* table-striped */
+        .table-striped td {
+            padding: 4pt 8pt;
+        }
+
+        .table-striped, .table-striped td {
+            border: 2pt solid #ddd;
+        }
+
+        .table-striped>tbody>tr:nth-child(2n+1)>td {
             font-weight: bold;
         }
-        .active.light {
-            background: #9fabcf;
-        }
-        .active.dark {
-            background: #1d2c4d;
-            color: #fff;
-        }
-        .align-center {
-            text-align: center;
-        }
-        .highlighter {
-            background: #97a9b7;
-        } */
 
-        hr {
-            margin: 20px 0;
-            border-color: tomato;
+        /* table-striped-noboder */
+        .table-striped-noboder {
+            border-collapse: separate;
+            border-spacing: 0 2pt;
+        }
+
+        .table-striped-noboder td {
+            padding: 4pt 8pt;
+        }
+
+        .table-striped-noboder>tbody>tr:nth-child(2n+1)>td {
+            font-weight: bold;
+            background-color: #cfe2ff;
+        }
+
+        .table-striped-noboder>tbody>tr:nth-child(2n)>td {
+            background-color: #ddd;
+        }
+
+        /* table-header */
+        .table-header td{
+            padding: 4pt 8pt;
+            background-color: #ddd;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <table class="table table-striped-columns" cellspacing="0">
+    <table class="table-primary" cellspacing="0">
         <colgroup>
             <col>
             <col>
@@ -140,19 +167,12 @@
         </tbody>
     </table>
     <hr />
-    <table class="table table-dark align-center" cellspacing="0">
+    <table class="table-secondary" cellspacing="0">
         <colgroup>
             <col>
             <col>
             <col>
         </colgroup>
-        <thead>
-            <tr>
-                <td>Texte</td>
-                <td>Texte</td>
-                <td>Texte</td>
-            </tr>
-        </thead>
         <tbody>
             <tr>
                 <td>Texte</td>
@@ -167,130 +187,56 @@
         </tbody>
     </table>
     <hr />
-    <table class="table table-striped" cellspacing="0">
-        <colgroup>
-            <col>
-        </colgroup>
-        <thead></thead>
+    <table class="table-card">
         <tbody>
             <tr>
-                <td>Texte</td>
-            </tr>
-            <tr>
-                <td>Texte</td>
-            </tr>
-            <tr>
-                <td>Texte</td>
-            </tr>
-            <tr>
-                <td>Texte</td>
-            </tr>   
-        </tbody>
-    </table>
-    <hr />
-    <table class="table">
-        <tbody>
-            <tr>
-                <td class="td-table">
-                    <table class="table table-dark align-center" cellspacing="0">
-                        <caption>xxxxxxxxxxxxxxxxxxxxxxxxxxx</caption>
-                        <colgroup>
-                            <col>
-                            <col width="25%">
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <td colspan="4">Texte</td>
-                                <td rowspan="2">Texte</td>
-                                <td colspan="3">Texte</td>
-                            </tr>
-                            <tr>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                            </tr>
-                            <tr>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                            </tr>
-                            <tr>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <td>
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                 </td>
             </tr>
             <tr>
                 <td>
-                    <table class="table table-light align-center" cellspacing="0">
+                    <table class="table-secondary" cellspacing="0">
                         <colgroup>
-                            <col>
-                            <col width="25%">
-                            <col>
-                            <col>
-                            <col>
                             <col>
                             <col>
                             <col>
                         </colgroup>
-                        <thead>
-                            <tr>
-                                <td colspan="4">Texte</td>
-                                <td rowspan="2">Texte</td>
-                                <td colspan="3">Texte</td>
-                            </tr>
-                            <tr>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                            </tr>
-                        </thead>
                         <tbody>
                             <tr>
                                 <td>Texte</td>
                                 <td>Texte</td>
                                 <td>Texte</td>
+                            </tr>
+                            <tr>
                                 <td>Texte</td>
                                 <td>Texte</td>
+                                <td>Texte</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <table class="table-card-noborder">
+        <tbody>
+            <tr>
+                <td>
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="table-secondary" cellspacing="0">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
                                 <td>Texte</td>
                                 <td>Texte</td>
                                 <td>Texte</td>
@@ -299,13 +245,34 @@
                                 <td>Texte</td>
                                 <td>Texte</td>
                                 <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
-                                <td>Texte</td>
                             </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <hr>
+    <table class="table-card-noborder">
+        <tbody>
+            <tr>
+                <td>
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="table-light" cellspacing="0">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
                             <tr>
+                                <td>Texte</td>
+                                <td>Texte</td>
                                 <td>Texte</td>
                                 <td>Texte</td>
                                 <td>Texte</td>
@@ -318,6 +285,58 @@
                         </tbody>
                     </table>
                 </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <hr>
+    <table class="table-striped" cellspacing="0">
+        <colgroup>
+            <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td>Texte</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table class="table-striped-noboder" cellspacing="0">
+        <colgroup>
+            <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td>Texte</td>
+            </tr>
+            <tr>
+                <td>Texte</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table class="table-header" cellspacing="0">
+        <colgroup>
+            <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <td>Texte</td>
             </tr>
         </tbody>
     </table>
